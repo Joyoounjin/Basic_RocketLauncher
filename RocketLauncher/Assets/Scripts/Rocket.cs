@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
@@ -53,5 +54,10 @@ public class Rocket : MonoBehaviour
 
         currentScoreTxt.text = $"{currentScore.ToString("F0")} M";
         HighScoreTxt.text = $"HIGH: {highScore.ToString("F0")} M";
+    }
+
+    public void Click()
+    {
+        SceneManager.LoadScene("RocketLauncher");
     }
 }
